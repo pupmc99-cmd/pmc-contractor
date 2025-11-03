@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=TH+Sarabun+PSK&display=swap');
+
+/* 🌹 Memorial Page */
+body {
+  margin: 0;
+  font-family: 'TH SarabunPSK', 'Prompt', sans-serif;
+  background: url('images/black_g.png') center center / cover no-repeat fixed;
+  color: #fff;
+  text-align: center;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.memorial-content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+
+  transform: translateY(-40px); /* 🔹 ยกขึ้น 40px */
+}
+
+/* 🔹 วงรีแบบเทาไล่เฉด + เงานุ่ม */
+.oval-frame {
+  width: 340px;
+  height: 440px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 40%, #555 0%, #222 100%);
+  box-shadow:
+    0 0 0 6px rgba(255,255,255,0.15),
+    0 0 25px rgba(0,0,0,0.8);
+  margin-bottom: 25px;
+}
+
+.oval-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  filter: grayscale(100%) contrast(1.05);
+}
+
+/* 🔹 ตัวอักษร */
+.mem-title {
+  font-size: 60px;
+  font-weight: bold;
+  color: #f7d774;
+  margin-bottom: 6px;      /* ลดจาก 12px */
+  line-height: 0;        /* บรรทัดชิดขึ้น */
+}
+
+.mem-desc {
+  font-size: 30px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1;        /* เดิม 1.4 */
+  margin-bottom: 0px;      /* เดิม 8px */
+}
+
+.mem-sub {
+  font-size: 30px;
+  color: #e0e0e0;
+  margin-top: 5px;        /* เพิ่มเล็กน้อยให้แยกกลุ่ม */
+  margin-bottom: 20px;
+  line-height: 1;        /* กระชับขึ้น */
+}
+.memorial-content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+
+  transform: translateY(-40px); /* 🔹 ยกขึ้น 40px */
+/* ✨ ปุ่มเข้าสู่เว็บไซต์ – เรียวเล็ก พื้นทองเล็กลง */
+.btn-enter {
+  display: inline-block;
+  padding: 5px 36px; /* 🔹 ลดพื้นที่ภายในปุ่ม */
+  font-family: 'TH SarabunPSK', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #1b1b1b;
+  text-decoration: none;
+  border-radius: 40px;
+
+  /* 🔹 ขอบทองบาง + สีทองอ่อน */
+  border: 1px solid rgba(247, 215, 116, 0.7);
+  background: linear-gradient(135deg, #faefb8, #f7d774);
+  box-shadow: 0 1px 4px rgba(247, 215, 116, 0.25);
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: softPulse 3.5s infinite ease-in-out;
+}
+
+/* 🔹 เอฟเฟกต์ Hover – เงานุ่ม */
+.btn-enter:hover {
+  transform: scale(1.03);
+  background: linear-gradient(135deg, #fff6cc, #f7d774);
+  box-shadow: 0 2px 8px rgba(247, 215, 116, 0.35);
+  color: #000;
+}
+
+/* 🌤 เอฟเฟกต์ “หายใจเบาๆ” */
+@keyframes softPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 1px 4px rgba(247, 215, 116, 0.25);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 2px 6px rgba(247, 215, 116, 0.35);
+  }
+}
